@@ -23,7 +23,7 @@ function App() {
 
 const StyledButton = styled.button`
   font-size: calc(10px + 2vmin);
-  background: ${({ theme }) => theme.ButtonNormal};
+  background: red;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   border-style: none;
