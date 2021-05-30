@@ -4,5 +4,5 @@ import reactRefresh from '@vitejs/plugin-react-refresh'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [reactRefresh()],
-  base: 'https://Galileo-dev.github.io/Portfolio/'
+  base: "./"
 })
