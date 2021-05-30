@@ -1,45 +1,41 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { useState } from "react";
+import styled, { ThemeProvider } from "styled-components";
+import "./App.css";
+import { LightTheme } from "./Theme";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+    <ThemeProvider theme={LightTheme}>
+      <div className="App">
+        <header className="App-header">
+          <p>
+            <StyledButton onClick={() => setCount((count) => count + 1)}>
+              count is: {count}
+            </StyledButton>
+          </p>
+        </header>
+      </div>
+    </ThemeProvider>
+  );
 }
 
-export default App
+const StyledButton = styled.button`
+  font-size: calc(10px + 2vmin);
+  background: ${({ theme }) => theme.ButtonNormal};
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  border-style: none;
+  padding: 10px 20px;
+  transition: 0.1s;
+  &:hover {
+    background: ${({ theme }) => theme.ButtonNormalHover};
+  }
+  &:active {
+    transform: scale(0.97);
+    background-color: ${({ theme }) => theme.ButtonNormalActive};
+  }
+`;
+
+export default App;
