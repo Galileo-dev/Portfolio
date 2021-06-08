@@ -264,9 +264,9 @@
   integrity sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
 
 "@react-three/drei@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-5.3.0.tgz#cadb033d7f3711ec4286bb2345a8b2c323367563"
-  integrity sha512-yTLSoujlVKUpECoLD1oJPqXPKnPI5Mci78lzzc83XEnOOZsX7Ruzn5JV6zlFKiWnRoUhAumBZzmQafl0Y6vLJQ==
+  version "5.3.4"
+  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-5.3.4.tgz#70712d4dd83dbd2fc6f0a98a75e2d76effd64459"
+  integrity sha512-9ysZbP5Sei+Nt/ks3ADCpMDW3OSedptAO8izzC7WBgYiTfjdxgDfcnj8CLRLz7YNIOIxl5PeOVSlg1nDB3MP0A==
   dependencies:
     "@babel/runtime" "^7.11.2"
     blob-polyfill "^5.0.20210201"
@@ -1342,9 +1342,9 @@ supports-color@^5.3.0, supports-color@^5.5.0:
     has-flag "^3.0.0"
 
 three-stdlib@^2.0.1:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.0.5.tgz#15c3486f5860685dd6b9b8dbd0a77923f72b88ad"
-  integrity sha512-D7GxK11JAL7flvRN77YO1nabEkuWwiSH/UPXWlOrybbhz1bVeA2kV1W6tudl+UVgyQwPiZ4fo/mlBzGvhUy9+g==
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.0.7.tgz#f1732002126e4d58b8e454f0d8a34c4478c607ba"
+  integrity sha512-RWFjJSFC9kwHgzJbVIdUg790If+KBxo1gm+UTAp+1QeYjJfTDm3XyAxs7203lZG1LwyUHYaY27Eah8weixMNEQ==
   dependencies:
     "@babel/runtime" "^7.13.17"
     "@webgpu/glslang" "^0.0.15"

@@ -19,14 +19,14 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Install yarn packages
-        run: yarn install --frozen-lockfile
+      - name: Install npm packages
+        run: npm install --frozen-lockfile
 
       - name: Build project
-        run: yarn run build
+        run: npm run build
 
       # - name: Run tests
-      #   run: yarn run test
+      #   run: npm run test
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
