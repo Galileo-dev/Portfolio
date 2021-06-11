@@ -14,7 +14,7 @@ class StarfieldMaterial extends ShaderMaterial {
     super({
       uniforms: {
         time: {
-          value: 2.0,
+          value: 1.0,
         },
         fade: {
           value: 1.0,
