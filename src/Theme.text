@@ -1,0 +1,31 @@
+// //   /* Color the border and text with theme.main */
+// //   color: ${props => props.theme.main},
+// //   border: 2px solid ${props => props.theme.main},
+// // `,
+// // ${({ theme }) => theme.primaryColor},
+
+// // font_family: 'Exo', sans_serif,
+
+// export let darkTheme = {
+// 	background:"#262429",
+// 	primary_color: "#4EAFF5",
+// 	primary_color_variant: "#804EAFF5",
+// 	color_secondary: "#3E78AF",
+// 	color_secondary_variant: "#3E78AF",
+// 	color_surface: "#0D0D0D",
+// 	color_surface_variant: "#171717",
+// 	color_on_primary: "#F9F9F9",
+// 	color_on_primary_variant:"#D9E6E6E6",
+// 	color_on_secondary: "#F9F9F9",
+// 	color_on_background: "#D8D8D8",
+// 	color_on_surface:"#D8D8D8",
+// 	color_on_surface_variant:"#6d6fd8",
+// 	color_disabled: "#808080",
+// 	color_disabled_variant:"#66808080",
+// 	color_highlighted_variant:"#7f45ad",
+// 	color_highlighted_variant_inverted:"#e1e1e2",
+// 	scrollbar_track: "#f55353",
+// 	scrollbar_thumb: "#272727",
+// 	transition_speed: "600ms",
+// 	nabar_room: "20px",
+// }
