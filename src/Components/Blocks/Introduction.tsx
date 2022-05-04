@@ -11,8 +11,8 @@ export const Introduction = () => {
         <TextContainer>
           <H2> Hello My name is Fionn aka Galileo</H2>
           <Paragraph>
-            I'm 17 years old programmer which loves technology and programming,
-            I started when I was 8 years old and haven't looked back since.
+            I'm 17 years old programmer who loves technology and programming, I
+            started when I was 8 years old and haven't looked back since.
             <br /> the world fascinates me so I poke it.
           </Paragraph>
         </TextContainer>
@@ -21,10 +21,10 @@ export const Introduction = () => {
   );
 };
 
-let Image = styled.img`
+export let Image = styled.img`
   border-radius: 1rem;
-  height: 10rem;
-  width: auto;
+  height: auto;
+  width: 15rem;
 `;
 
 let H2 = styled.h2`

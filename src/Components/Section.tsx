@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../styles/helpers";
 
 export enum VARIANT {
   PRIMARY,
@@ -13,6 +14,11 @@ export const Section = styled.section<IProps>`
   margin-bottom: 2rem;
   padding: 1rem;
   border: solid 0.3rem ${(props) => props.theme.palette.common.black};
+  width: 75%;
+
+  @media ${device.mobileL} {
+    width: 80%;
+  }
 
   border-radius: ${(props) => props.theme.borderRadius};
   ${(props) => {
