@@ -12,6 +12,8 @@ import {
   SecondaryContainer,
 } from "./styles/helpers";
 import { Introduction } from "./Components/Blocks/Introduction";
+import { ScrollList } from "./Components/List";
+import { GithubRepos } from "./Components/Blocks/GithubRepos";
 
 function App(props: any) {
   const [theme, setTheme] = React.useState(defaultTheme);
@@ -28,8 +30,12 @@ function App(props: any) {
       </Float>
       <MainContainer>
         <SecondaryContainer>
-          <Introduction />
-          <Section></Section>
+          <Section>
+            <Introduction />
+          </Section>
+          <Section>
+            <GithubRepos />
+          </Section>
           <Section></Section>
         </SecondaryContainer>
       </MainContainer>
