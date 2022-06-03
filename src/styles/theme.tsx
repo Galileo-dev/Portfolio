@@ -1,7 +1,7 @@
 // theme.ts
 import { DefaultTheme } from "styled-components";
 
-export const defaultTheme: DefaultTheme = {
+export const secondaryTheme: DefaultTheme = {
   borderRadius: "7px",
   background:
     "url(https://unsplash.com/photos/hGV2TfOh0ns/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQ5ODAyNjM4)",
@@ -22,10 +22,18 @@ export const defaultTheme: DefaultTheme = {
       main: "#1d1d1d",
       contrastText: "#d4d4d4",
     },
+    card: {
+      main: "#1d1d1d",
+      contrastText: "#d4d4d4",
+    },
+    card_surface: {
+      main: "#636363",
+      contrastText: "#C1C1C1",
+    },
   },
 };
 
-export const secondaryTheme: DefaultTheme = {
+export const defaultTheme: DefaultTheme = {
   borderRadius: "7px",
   background: "#2D2D2D",
   palette: {
@@ -44,6 +52,14 @@ export const secondaryTheme: DefaultTheme = {
     surface: {
       main: "#2D2D2D",
       contrastText: "#C1C1C1",
+    },
+    card: {
+      main: "#313131",
+      contrastText: "#FFFFFF",
+    },
+    card_surface: {
+      main: "#636363",
+      contrastText: "#FFFFFF",
     },
   },
 };

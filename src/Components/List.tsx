@@ -11,16 +11,28 @@ import { Item } from "framer-motion/types/components/Reorder/Item";
 import { useScroll } from "@use-gesture/react";
 // https://konstantinlebedev.com/horizontal-scroll-animation/
 
-export let ScrollContainer = styled.div`
+let NeumorphismInset = styled.div`
+  border-radius: ${(props) => props.theme.borderRadius};
+  background: #2d2d2d;
+  box-shadow: inset 20px 20px 24px #171717, inset -20px -20px 24px #434343;
+`;
+
+export let ScrollContainer = styled(NeumorphismInset)`
   display: flex;
   height: 15rem;
-  color: ${(props) => props.theme.palette.secondary.contrastText};
-  background-color: ${(props) => props.theme.palette.secondary.main};
-  border-radius: ${(props) => props.theme.borderRadius};
-  box-shadow: inset 0 0 10px;
   overflow-x: scroll;
   width: 100%;
   padding: 20px 0;
+
+  &::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background: gray;
+  }
+  &::-webkit-scrollbar-thumb:horizontal {
+    background: ${(props) => props.theme.palette.primary.contrastText};
+    border-radius: 10px;
+  }
 `;
 
 // const scrollRef: React.MutableRefObject<any> = useRef(null);
@@ -79,15 +91,16 @@ export const ScrollItem = (props: any) => {
   };
 
   return (
-    <Card
-      as={motion.div}
+    <motion.div
       variants={variants}
       initial="from"
       animate="to"
       transition={spring}
     >
-      <h2>{props.repo.name}</h2>
-      <p>{props.repo.description}</p>
-    </Card>
+      <Card
+        mainText={props.repo.name}
+        descriptionText={props.repo.description}
+      />
+    </motion.div>
   );
 };

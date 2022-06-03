@@ -16,6 +16,8 @@ declare module "styled-components" {
       primary: IPalette;
       secondary: IPalette;
       surface: IPalette;
+      card: IPalette;
+      card_surface: IPalette;
     };
   }
 }
