@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useRef, useState } from "react";
 import { createGlobalStyle } from "styled-components";
 import styled, { ThemeProvider } from "styled-components";
 import "./App.css";
-import { defaultTheme, secondaryTheme } from "./styles/theme";
+import { DarkTheme, LightTheme } from "./styles/theme";
 import { Button, VARIANT } from "./Components/Button";
 import { Section } from "./Components/Section";
 import {
@@ -12,13 +12,12 @@ import {
   SecondaryContainer,
 } from "./styles/helpers";
 import { Introduction } from "./Components/Blocks/Introduction";
-import { ScrollList } from "./Components/List";
 import { GithubRepos } from "./Components/Blocks/GithubRepos";
 
 function App(props: any) {
-  const [theme, setTheme] = React.useState(defaultTheme);
+  const [theme, setTheme] = React.useState(DarkTheme);
   const updateTheme = () => {
-    setTheme(theme == defaultTheme ? secondaryTheme : defaultTheme);
+    setTheme(theme == DarkTheme ? LightTheme : DarkTheme);
   };
   return (
     <ThemeProvider theme={theme}>

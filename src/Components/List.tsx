@@ -11,10 +11,17 @@ import { Item } from "framer-motion/types/components/Reorder/Item";
 import { useScroll } from "@use-gesture/react";
 // https://konstantinlebedev.com/horizontal-scroll-animation/
 
+// let NeumorphismInset = styled.div`
+//   border-radius: ${(props) => props.theme.borderRadius};
+//   background: #2d2d2d;
+//   box-shadow: inset 20px 20px 24px #171717, inset -20px -20px 24px #434343;
+// `;
+
 let NeumorphismInset = styled.div`
   border-radius: ${(props) => props.theme.borderRadius};
-  background: #2d2d2d;
-  box-shadow: inset 20px 20px 24px #171717, inset -20px -20px 24px #434343;
+  background: #2c2f33;
+  box-shadow: inset -6.22302px -6.22302px 18.6691px #3b4451,
+    inset 6.22302px 6.22302px 18.6691px #000000;
 `;
 
 export let ScrollContainer = styled(NeumorphismInset)`
