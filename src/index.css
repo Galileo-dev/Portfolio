@@ -22,4 +22,11 @@ body,
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+
+  overscroll-behavior: none;
+  -ms-overflow-style: none;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
