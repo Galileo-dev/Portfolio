@@ -1,7 +1,13 @@
 // theme.ts
 import { DefaultTheme } from "styled-components";
 
+export enum ColorType {
+  Light,
+  Dark,
+}
+
 export const LightTheme: DefaultTheme = {
+  kind: ColorType.Light,
   borderRadius: "7px",
   background:
     "url(https://unsplash.com/photos/hGV2TfOh0ns/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQ5ODAyNjM4)",
@@ -34,6 +40,7 @@ export const LightTheme: DefaultTheme = {
 };
 
 export const DarkTheme: DefaultTheme = {
+  kind: ColorType.Dark,
   borderRadius: "7px",
   background: "#2C2F33",
   palette: {
@@ -47,18 +54,18 @@ export const DarkTheme: DefaultTheme = {
     },
     secondary: {
       main: "#2C2F33",
-      contrastText: "#FFFFFF",
+      contrastText: "#EEEEEE",
     },
     surface: {
       main: "#2C2F33",
-      contrastText: "#C1C1C1",
+      contrastText: "#EEEEEE",
     },
     card: {
-      main: "#2C2F33",
+      main: "#2c2f33",
       contrastText: "#EEEEEE",
     },
     card_surface: {
-      main: "#25CEDE",
+      main: "#2F7EEF",
       contrastText: "#EEEEEE",
     },
   },
