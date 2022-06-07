@@ -3,6 +3,7 @@ import { ScrollContainer, ScrollItem, ScrollMain } from "../List";
 import { useEffect, useState } from "react";
 import { useSpring } from "framer-motion";
 import { useScroll } from "@use-gesture/react";
+import { GitHubScrollList } from "../ScrollList";
 
 export const GithubRepos = () => {
   const [githubData, setGithubData] = useState([]);
@@ -11,34 +12,38 @@ export const GithubRepos = () => {
   const fetchData = () => {
     return fetch(`https://api.github.com/users/${githubUser}/repos`)
       .then((response) => response.json())
-      .then((data) => setGithubData(data));
+      .then((data) => data.filter((repo: any) => !repo.fork))
+      .then((data_filtered) => setGithubData(data_filtered));
   };
 
   useEffect(() => {
-    fetchData();
+    fetchData().then(() => console.log(githubData));
   }, []);
 
-  const clamp = (value: number, clampAt: number = 10) => {
-    if (value > 0) {
-      return value > clampAt ? clampAt : value;
-    } else {
-      return value < -clampAt ? -clampAt : value;
-    }
-  };
+  useEffect(() => {
+    // this is just for logging.
+    console.log(githubData);
+  }, [githubData]);
 
-  const [style, set] = useState(0);
-  const bind = useScroll((event) => {
-    set(event.scrolling ? clamp(event.delta[0]) : 0);
-  });
+  // const clamp = (value: number, clampAt: number = 10) => {
+  //   if (value > 0) {
+  //     return value > clampAt ? clampAt : value;
+  //   } else {
+  //     return value < -clampAt ? -clampAt : value;
+  //   }
+  // };
 
-  const Items = githubData.map((repo: any) => (
-    <ScrollItem repo={repo} key={repo.id} style={style} />
-  ));
+  // const [style, set] = useState(0);
+  // const bind = useScroll((event) => {
+  //   set(event.scrolling ? clamp(event.delta[0]) : 0);
+  // });
 
-  console.log(githubData);
+  // const Items = githubData.map((repo: any) => (
+  //   <ScrollItem repo={repo} key={repo.id} style={style} />
+  // ));
   return (
     <>
-      <ScrollMain bind={bind}>{Items}</ScrollMain>
+      <GitHubScrollList data={githubData} />
     </>
   );
 };

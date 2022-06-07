@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import gh_squid from "../icons/Github/Github_Squid.svg";
+import { NeumorphismSurface } from "./Neumorphism";
 export const Card = (props: any) => {
+  const URL_REGEX =
+    /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
+  const renderText = (txt: string) =>
+    txt.split(" ").map((part) =>
+      URL_REGEX.test(part) ? (
+        <a key={part} href={part}>
+          {part}{" "}
+        </a>
+      ) : (
+        part + " "
+      )
+    );
+
+  let url_text: (string | JSX.Element)[] = [""];
+  if (props.descriptionText) {
+    url_text = renderText(props.descriptionText);
+  }
   return (
     <Container>
       <Main> {props.mainText} </Main>
       <Description>
         {" "}
-        <p style={{ marginBottom: "0" }}>{props.descriptionText}</p>
+        <p style={{ marginBottom: "0", margin: "10px" }}>{url_text}</p>
         <IconContainer>
           <Icon src={gh_squid} />
         </IconContainer>
@@ -63,16 +81,13 @@ export const Description = styled.div`
 //   border-radius: ${(props) => props.theme.borderRadius};
 // `;
 
-export const Container = styled.div`
+export const Container = styled(NeumorphismSurface)`
   display: flex;
   flex-shrink: 0;
   width: 300px;
   height: 200px;
   margin: 10px;
   flex-direction: column;
+  background-color: ${(props) => props.theme.palette.card.main};
   border-radius: ${(props) => props.theme.borderRadius};
-
-  background: #2c2f33;
-  box-shadow: -6.22302px -6.22302px 18.6691px #262b33,
-    6.22302px 6.22302px 18.6691px #000000;
 `;

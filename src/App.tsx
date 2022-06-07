@@ -13,6 +13,7 @@ import {
 } from "./styles/helpers";
 import { Introduction } from "./Components/Blocks/Introduction";
 import { GithubRepos } from "./Components/Blocks/GithubRepos";
+import { WebStack } from "./Components/Blocks/WebStack";
 
 function App(props: any) {
   const [theme, setTheme] = React.useState(DarkTheme);
@@ -23,19 +24,22 @@ function App(props: any) {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Float position={POSITION.TOPLEFT}>
-        <Button variant={VARIANT.PRIMARY} onClick={updateTheme}>
+        {/* <Button variant={VARIANT.PRIMARY} onClick={updateTheme}>
           Theme
-        </Button>
+        </Button> */}
       </Float>
       <MainContainer>
         <SecondaryContainer>
-          <Section>
+          <Section name="Who am I?">
             <Introduction />
           </Section>
-          <Section>
+          <Section name="My repositories">
             <GithubRepos />
           </Section>
-          <Section></Section>
+          <Section name="My Web Stack">
+            <WebStack />
+          </Section>
+          <Section name="Blog... Maybe If I Feel Like It"></Section>
         </SecondaryContainer>
       </MainContainer>
     </ThemeProvider>
