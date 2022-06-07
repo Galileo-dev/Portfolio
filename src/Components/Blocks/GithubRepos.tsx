@@ -1,8 +1,5 @@
 import React from "react";
-import { ScrollContainer, ScrollItem, ScrollMain } from "../List";
 import { useEffect, useState } from "react";
-import { useSpring } from "framer-motion";
-import { useScroll } from "@use-gesture/react";
 import { GitHubScrollList } from "../ScrollList";
 
 export const GithubRepos = () => {
