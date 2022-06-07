@@ -21,9 +21,10 @@ export const WebStack = () => {
     border-radius: 0.5rem;
     flex-direction: column;
     width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
     &::-webkit-scrollbar {
       height: 10px;
       width: 10px;
@@ -36,9 +37,12 @@ export const WebStack = () => {
   const Tier = styled.div`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   `;
   const TierItem = styled.div`
+    flex: 1;
     margin: 0px 20px 0px 20px;
+    flex-wrap: wrap;
   `;
   const TierLabel = styled.div`
     font-weight: 700;
