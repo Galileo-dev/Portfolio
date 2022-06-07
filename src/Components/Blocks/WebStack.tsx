@@ -11,8 +11,8 @@ import {
   DiNodejs,
   DiRasberryPi,
   DiPython,
-} from "react-icons/Di";
-import { SiDeno, SiStyledcomponents, SiSvelte } from "react-icons/Si";
+} from "react-icons/di";
+import { SiDeno, SiStyledcomponents, SiSvelte } from "react-icons/si";
 
 export const WebStack = () => {
   const Container = styled.div`
