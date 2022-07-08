@@ -8,6 +8,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@iconify/react": "^3.2.2",
     "@react-spring/three": "^9.2.3",
     "@react-three/drei": "^5.3.0",
     "@react-three/fiber": "^6.2.2",

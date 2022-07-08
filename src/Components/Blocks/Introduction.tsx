@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { SideImage } from "../../styles/helpers";
+import Galileo from "../../icons/Profile/galileo_profile.svg";
 
 export const Introduction = () => {
   return (
     <SideImage>
-      <Image src="https://avatars.githubusercontent.com/u/32818066?v=4" />
+      <Image src={Galileo} />
       <TextContainer>
         <H2> Hello My name is Fionn aka Galileo</H2>
         <Paragraph>

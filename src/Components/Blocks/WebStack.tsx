@@ -13,6 +13,7 @@ import {
   DiPython,
 } from "react-icons/di";
 import { SiDeno, SiStyledcomponents, SiSvelte } from "react-icons/si";
+import { Icon } from "@iconify/react";
 
 export const WebStack = () => {
   const Container = styled.div`
@@ -40,19 +41,28 @@ export const WebStack = () => {
     flex-wrap: wrap;
   `;
   const TierItem = styled.div`
-    flex: 1;
     margin: 0px 20px 0px 20px;
     flex-wrap: wrap;
+    width: 100px;
   `;
   const TierLabel = styled.div`
     font-weight: 700;
     font-size: 1.5rem;
+
     color: ${(props) => props.theme.palette.surface.contrastText};
     text-decoration: underline;
     text-decoration-thickness: 2px;
     letter-spacing: 2px;
     margin: 10px;
   `;
+
+  const TierItemLabel = styled.div`
+    font-weight: 500;
+    color: ${(props) => props.theme.palette.surface.contrastText};
+    text-align: center;
+    position: relative;
+  `;
+
   return (
     <>
       <Container>
@@ -60,31 +70,42 @@ export const WebStack = () => {
         <Tier>
           <TierItem>
             <DiRust size={100} color="#984C11" />
+            <TierItemLabel>Rust</TierItemLabel>
           </TierItem>
           <TierItem>
-            <DiNodejs size={100} color="#F2F2F2" />
+            <Icon icon="logos:nodejs" width="100" />
+            <TierItemLabel>Nodejs</TierItemLabel>
           </TierItem>
           <TierItem>
-            <DiRasberryPi size={100} />
+            <DiRasberryPi size={100} color="#B2103F" />
+            <TierItemLabel>Rasberry Pi</TierItemLabel>
           </TierItem>
           <TierItem>
-            <DiPython size={100} />
+            <DiPython size={100} color="#FFD344" />
+            <TierItemLabel>Python</TierItemLabel>
           </TierItem>
           <TierItem>
-            <SiDeno size={100} />
+            <SiDeno size={100} color="#0B0B0B" />
+            <TierItemLabel>Deno</TierItemLabel>
           </TierItem>
         </Tier>
 
         <TierLabel>Frontend</TierLabel>
         <Tier>
           <TierItem>
-            <DiReact size={100} />
+            <DiReact size={100} color="#00CEF2" />
+            <TierItemLabel>React</TierItemLabel>
           </TierItem>
           <TierItem>
-            <SiSvelte size={100} />
+            <SiSvelte size={100} color="#F73C00" />
+            <TierItemLabel>Svelte</TierItemLabel>
           </TierItem>
           <TierItem>
-            <SiStyledcomponents size={100} />
+            <img
+              src="https://www.styled-components.com/atom.png"
+              height={100}
+            />
+            <TierItemLabel>styled components</TierItemLabel>
           </TierItem>
         </Tier>
       </Container>
