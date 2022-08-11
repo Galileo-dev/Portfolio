@@ -7,7 +7,7 @@ export const GithubRepos = () => {
   const [githubUser, setGithubUser] = useState("Galileo-dev");
 
   const fetchData = () => {
-    return fetch(`https://api.github.com/users/${githubUser}/repos`)
+    return fetch(`https://api.github.com/users/${githubUser}/repos?per_page=50`)
       .then((response) => response.json())
       .then((data) => data.filter((repo: any) => !repo.fork))
       .then((data_filtered) => setGithubData(data_filtered));
