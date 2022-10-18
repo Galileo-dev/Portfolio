@@ -25,24 +25,24 @@ export const Card = (props: any) => {
       <Main> {props.mainText} </Main>
       <Description>
         {" "}
-        <p style={{ marginBottom: "0", margin: "10px" }}>{url_text}</p>
-        <IconContainer>
+        <p style={{ margin: "0" }}>{url_text}</p>
+        {/* <IconContainer>
           <Icon src={gh_squid} />
-        </IconContainer>
+        </IconContainer> */}
       </Description>
     </Container>
   );
 };
 export const Icon = styled.img`
-  margin-bottom: 5px;
+  ottom: 5px;
   margin-right: 4px;
 `;
 
 export const IconContainer = styled.div`
-  /* position: fixed;
+  position: fixed;
 
   bottom: 0;
-  right: 0; */
+  right: 0; 
   display: flex;
   align-content: flex-end;
   justify-content: flex-end;
@@ -55,18 +55,20 @@ export const Main = styled.div`
   margin-left: 1rem;
   font-weight: 500;
   letter-spacing: 0.105em;
-  height: 20rem;
+  height: 100%;
+  flex:2;
   flex-direction: column;
 `;
 export const Description = styled.div`
   align-content: flex-end;
-
+  
   background-color: ${(props) => props.theme.palette.card_surface.main};
   color: ${(props) => props.theme.palette.card_surface.contrastText};
   border-radius: ${(props) => props.theme.borderRadius};
-  width: 100%;
-  max-height: 100%;
-  /* overflow-y: scroll; */
+  height: fit-content;
+  max-height:40%;
+  overflow-y: scroll;
+  padding: 0.5rem;
 `;
 // export const Container = styled.div`
 //   display: flex;

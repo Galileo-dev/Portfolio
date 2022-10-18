@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useSpring } from "framer-motion";
+import { motion, useSpring } from "framer-motion";
 import { useScroll } from "@use-gesture/react";
 import styled from "styled-components";
 import { NeumorphismSurface } from "../Neumorphism";
@@ -39,22 +39,40 @@ export const WebStack = () => {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: baseline;
   `;
   const TierItem = styled.div`
-    margin: 0px 20px 0px 20px;
+    /* margin: 0px 20px 0px 20px; */
+    margin:20px;
     flex-wrap: wrap;
     width: 100px;
   `;
   const TierLabel = styled.div`
     font-weight: 700;
     font-size: 1.5rem;
-
     color: ${(props) => props.theme.palette.surface.contrastText};
     text-decoration: underline;
     text-decoration-thickness: 2px;
     letter-spacing: 2px;
     margin: 10px;
   `;
+
+  const TierItemLabelMotion = (props: any) => {
+    // const [isHovered, setHovered] = useState(false);
+
+    return (
+      <motion.div
+        style={{
+          color: "white",
+          fontWeight: 700,
+          fontSize: "1.2rem",
+          letterSpacing: "2px",
+        }}
+      >
+        {props.children}
+      </motion.div>
+    );
+  }
 
   const TierItemLabel = styled.div`
     font-weight: 500;

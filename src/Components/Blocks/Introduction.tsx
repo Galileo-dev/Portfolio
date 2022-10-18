@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { SideImage } from "../../styles/helpers";
 import Galileo from "../../icons/Profile/galileo_profile.svg";
 
+
+
+function getYearDiff(date1: Date, date2: Date) {
+  return Math.abs(date2.getFullYear() - date1.getFullYear());
+}
+
 export const Introduction = () => {
+  const [year, setYear] = React.useState(0);
+  useEffect(() => {
+    setYear(getYearDiff(new Date('2004-06-19'), new Date()));
+  }, []);
+
+
   return (
     <SideImage>
       <Image src={Galileo} />
       <TextContainer>
         <H2> Hello My name is Fionn aka Galileo</H2>
         <Paragraph>
-          I'm 17 years old programmer who loves technology and programming, I
+          I'm {year} years old programmer who loves technology and programming, I
           started when I was 8 years old and haven't looked back since.
           <br /> the world fascinates me so I poke it.
         </Paragraph>

@@ -8,8 +8,9 @@ import { useScroll } from "@use-gesture/react";
 
 const ScrollContainer = styled(NeumorphismInset)`
   display: flex;
-  height: 15rem;
+  height: 100%;
   overflow-x: scroll;
+  overflow-y: hidden;
   width: 100%;
   padding: 20px 0;
 
